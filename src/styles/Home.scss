@@ -1,0 +1,32 @@
+.home-styled {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    //gap: 5px;
+
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        &:hover img {
+            transform: scale(1.2);
+            transition: var(--transition);
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .home-styled {
+        margin-top: 150px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
